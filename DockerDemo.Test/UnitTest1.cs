@@ -8,7 +8,13 @@ namespace DockerDemo.Test
 		[Fact]
 		public void Test1()
 		{
-			Assert.Equal(1, 2);
+			Action act = () =>
+			{
+				dynamic a = null;
+				var d = a.ddd;
+			};
+
+			Assert.Throws<Microsoft.CSharp.RuntimeBinder.RuntimeBinderException>(act);
 		}
 
 		[Theory]
