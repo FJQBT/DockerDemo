@@ -1,6 +1,10 @@
+sudo: required
+
 language: csharp
-mono: none
-dotnet: 2.1
-dist: trusty
+
+services:
+ - docker
+
 script:
- - dotnet build
+ - cp DockerDemo/Dockerfile DockerDemo/Dockerfile
+ - docker build -t aspnetapp .
