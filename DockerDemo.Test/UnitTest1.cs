@@ -10,5 +10,14 @@ namespace DockerDemo.Test
 		{
 			Assert.Equal(1, 2);
 		}
+
+		[Theory]
+		[InlineData(1, 2, 3)]
+		[InlineData(11, 22, 33)]
+		[InlineData(111, 222, 333)]
+		public void SumTest(int a, int b, int sum)
+		{
+			Assert.Equal(sum, a + b);
+		}
 	}
 }
