@@ -8,7 +8,7 @@ namespace DockerDemo.Test
 		[Fact]
 		public void Test1()
 		{
-			1.Equals(2);
+			Assert.Equal(1, 2);
 		}
 	}
 }
