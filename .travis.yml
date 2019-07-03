@@ -4,9 +4,15 @@ language: csharp
 
 mono: none
 
+dotnet: 2.1
+
+dist: xenial
+
 services:
  - docker
 
 script:
+ - dotnet restore
+ - dotnet test
  - cp ./DockerDemo/Dockerfile ./Dockerfile
  - docker build -t aspnetapp:latest .
