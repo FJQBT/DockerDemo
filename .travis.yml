@@ -6,5 +6,5 @@ services:
  - docker
 
 script:
- - cp DockerDemo/Dockerfile DockerDemo/Dockerfile
- - docker build -t aspnetapp .
+ - cp ./DockerDemo/Dockerfile ./Dockerfile
+ - docker build -t aspnetapp:latest .
